@@ -1,0 +1,117 @@
+2️⃣ Core Features (Phase-wise)
+🔹 Phase 1 – Authentication & Users
+
+Must-have foundation:
+
+Register
+
+Login
+
+JWT access + refresh tokens
+
+Email verification (optional)
+
+Forget / Reset password
+
+User profile
+
+name
+
+username
+
+bio
+
+profile photo
+
+cover photo
+
+🔹 Phase 2 – Posts
+
+Create post (text + image)
+
+Edit post
+
+Delete post
+
+Get feed (followers posts)
+
+Like / Unlike post
+
+Comment on post
+
+🔹 Phase 3 – Follow System
+
+Follow user
+
+Unfollow user
+
+Followers list
+
+Following list
+
+🔹 Phase 4 – Notifications
+
+Like notification
+
+Comment notification
+
+Follow notification
+
+🔹 Phase 5 – Chat (Advanced)
+
+One-to-one chat
+
+Real-time messages (Socket.io)
+
+Seen status
+
+3️⃣ Recommended Folder Structure (Clean & Advanced)
+social-media-backend/
+│
+├── src/
+│   ├── config/
+│   │   ├── database.js
+│   │   ├── jwt.js
+│   │   └── cloudinary.js
+│
+│   ├── models/
+│   │   ├── user.model.js
+│   │   ├── post.model.js
+│   │   ├── comment.model.js
+│   │   ├── like.model.js
+│   │   ├── follow.model.js
+│   │   └── notification.model.js
+│
+│   ├── controllers/
+│   │   ├── auth.controller.js
+│   │   ├── user.controller.js
+│   │   ├── post.controller.js
+│   │   ├── follow.controller.js
+│   │   └── notification.controller.js
+│
+│   ├── routes/
+│   │   ├── auth.routes.js
+│   │   ├── user.routes.js
+│   │   ├── post.routes.js
+│   │   └── follow.routes.js
+│
+│   ├── middlewares/
+│   │   ├── auth.middleware.js
+│   │   ├── error.middleware.js
+│   │   └── upload.middleware.js
+│
+│   ├── services/
+│   │   ├── token.service.js
+│   │   ├── mail.service.js
+│   │   └── notification.service.js
+│
+│   ├── utils/
+│   │   ├── response.js
+│   │   └── generateOtp.js
+│
+│   ├── app.js
+│   └── server.js
+│
+├── .env
+├── package.json
+└── README.md
