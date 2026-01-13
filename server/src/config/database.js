@@ -34,7 +34,8 @@ const testPostgresConnection = async () => {
     await postgres.sync({ alter: false });
     console.log("Database synced successfully.");
   } catch (error) {
-    throw new error("Unable to connect", error.message);
+    throw new Error(`Unable to connect: ${error.message}`);
   }
 };
+
 module.exports = { testPostgresConnection, postgres };
